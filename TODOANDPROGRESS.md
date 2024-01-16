@@ -1,8 +1,5 @@
 # Todo:
 
-- Create navigation bar at the bottom with 5 icons: Wallet, History, Transact, Connect, Settings
-- Create structure for the screens and ensure navigation works; Wallet, History and Settings is a screen itself. Transact and connect will be a bottom popup
-- Create structure for Transact pages: Swap (Screen), Send (Screen), Receive (bottom popup)
 - Work on wallet screen using hard-coded data
 - Set up a global state management system (contains tokens, balances, private key, etc...).
 - Find a way get token balances for the wallet from blockchain. Start of with Sepolia Testnet
@@ -28,3 +25,8 @@
 # Done:
 
 - 16/11/23: Initialise project with first commit and planning
+- 16/-1/24: Create Navigation Structure
+  - 16/01/24: Create navigation bar at the bottom with 5 icons: Wallet, History, Transact, Connect, Settings
+  - 16/01/24: Create structure for the screens and ensure navigation works; Wallet, History and Settings is a screen itself. Transact and connect will be a bottom popup
+  - 16/01/24: Handle it as a drawer that pops up. That, to see if drawer is open, put variable in global state (useContext)
+  - 16/01/24: Create structure for Transact pages: Swap (Screen), Send (Screen), Receive (bottom popup)
