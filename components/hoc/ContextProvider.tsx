@@ -1,5 +1,5 @@
+import BottomDrawerContextProvider from "@/store/context/bottom-drawer-context";
 import React from "react";
-import BottomDrawerContextProvider from "../../store/context/bottom-drawer-context";
 
 const ContextProvider: React.FC<{ children: React.ReactNode }> = ({
   children,

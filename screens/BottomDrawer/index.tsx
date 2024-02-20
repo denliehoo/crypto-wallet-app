@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { Modal, Pressable, StyleSheet, Text, View } from "react-native";
+
 import {
   BottomDrawerContext,
   EBottomDrawerContent,
-} from "../../store/context/bottom-drawer-context";
+} from "@/store/context/bottom-drawer-context";
 import TransactOptions from "../Transact/TransactOptions";
 import Receive from "../Transact/Receive";
 import Connect from "../Connect";
-import Swap from "../Transact/Swap";
 const BottomDrawer = () => {
   const bottomDrawerCtx = useContext(BottomDrawerContext);
   const { hide, visible, content } = bottomDrawerCtx;

@@ -1,6 +1,13 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "typeRoots": ["type.d.ts"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    },
+
+
     "strict": true
   }
 }
