@@ -3,7 +3,6 @@ import { NavigationContainer } from "@react-navigation/native";
 import React, { useContext } from "react";
 import { Pressable } from "react-native";
 import HistoryScreen from "../../screens/History";
-import WalletScreen from "../../screens/Wallet";
 
 // can see full list of designers and icons here: https://iconssend.expo.fyi/Index
 import { Ionicons } from "@expo/vector-icons";
@@ -15,10 +14,12 @@ import {
   BottomDrawerContext,
   EBottomDrawerContent,
 } from "../../store/context/bottom-drawer-context";
-import SendScreen from "../../screens/Transact/Send";
-import BottomDrawer from "../../screens/BottomDrawer";
-import SettingsScreen from "../../screens/Settings";
-import SwapScreen from "../../screens/Transact/Swap";
+
+import WalletScreen from "@/screens/Wallet";
+import SettingsScreen from "@/screens/Settings";
+import SendScreen from "@/screens/Transact/Send";
+import SwapScreen from "@/screens/Transact/Swap";
+import BottomDrawer from "@/screens/BottomDrawer";
 
 const Tab = createBottomTabNavigator();
 
