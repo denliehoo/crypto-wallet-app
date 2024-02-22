@@ -1,6 +1,7 @@
 # Todo:
 
-- Work on wallet screen using hard-coded data
+- Introduce styled components
+- Introduce drop down list
 - Set up a global state management system (contains tokens, balances, private key, etc...).
 - Find a way get token balances for the wallet from blockchain. Start of with Sepolia Testnet
 - Change wallet screen from hard-coded data to real-time data from blockchain
@@ -31,3 +32,4 @@
   - 16/01/24: Handle it as a drawer that pops up. That, to see if drawer is open, put variable in global state (useContext)
   - 16/01/24: Create structure for Transact pages: Swap (Screen), Send (Screen), Receive (bottom popup)
   - 20/02/24: set up alias imports
+  - 22/02/24: Layout for wallet screen using hard code data

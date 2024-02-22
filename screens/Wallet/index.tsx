@@ -1,8 +1,13 @@
-import { Button, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import WalletTokens from "./tokens";
+import WalletNetwork from "./network";
+import WalletAccount from "./account";
 const WalletScreen = () => {
   return (
     <View>
-      <Text>WalletScreen</Text>
+      <WalletNetwork />
+      <WalletAccount />
+      <WalletTokens />
     </View>
   );
 };
