@@ -4,7 +4,7 @@ import { Modal, Pressable, StyleSheet, Text, View } from "react-native";
 import {
   BottomDrawerContext,
   EBottomDrawerContent,
-} from "@/store/context/bottom-drawer-context";
+} from "@/store/context/bottom-drawer";
 import TransactOptions from "../Transact/TransactOptions";
 import Receive from "../Transact/Receive";
 import Connect from "../Connect";

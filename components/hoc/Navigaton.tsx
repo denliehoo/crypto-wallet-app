@@ -13,7 +13,7 @@ import EmptyComponent from "../EmptyComponent";
 import {
   BottomDrawerContext,
   EBottomDrawerContent,
-} from "../../store/context/bottom-drawer-context";
+} from "../../store/context/bottom-drawer";
 
 import WalletScreen from "@/screens/Wallet";
 import SettingsScreen from "@/screens/Settings";

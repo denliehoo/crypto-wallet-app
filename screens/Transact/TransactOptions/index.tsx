@@ -6,7 +6,7 @@ import { FontAwesome } from "@expo/vector-icons";
 import {
   BottomDrawerContext,
   EBottomDrawerContent,
-} from "@/store/context/bottom-drawer-context";
+} from "@/store/context/bottom-drawer";
 
 const TransactOptions = () => {
   const bottomDrawerCtx = useContext(BottomDrawerContext);
