@@ -1,6 +1,7 @@
 import DropDownSelect from "@/components/drop-down-select";
 import { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
+import styled from "styled-components/native";
 
 const WalletNetwork = () => {
   const [value, setValue] = useState("SEPOLIA");
@@ -12,8 +13,8 @@ const WalletNetwork = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <View style={styles.container}>
-      <View style={styles.dropdownContainer}>
+    <Container>
+      <DropdownContainer>
         <DropDownSelect
           open={open}
           setOpen={setOpen}
@@ -24,20 +25,20 @@ const WalletNetwork = () => {
           placeholder={"Select a network"}
           onChangeValue={(v) => console.log(v)}
         />
-      </View>
-    </View>
+      </DropdownContainer>
+    </Container>
   );
 };
 
 export default WalletNetwork;
 
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: "center",
-    alignItems: "center",
-    marginVertical: 10,
-  },
-  dropdownContainer: {
-    width: 200,
-  },
-});
+const Container = styled.View`
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+`;
+
+const DropdownContainer = styled.View`
+  width: 200px;
+`;

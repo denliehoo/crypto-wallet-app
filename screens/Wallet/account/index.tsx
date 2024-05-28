@@ -1,64 +1,71 @@
-import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import styled from "styled-components/native";
+
 const WalletAccount = () => {
   return (
-    <View style={styles.container}>
-      <View>
-        <View style={styles.card}>
-          <View style={styles.accountContainer}>
-            <Text style={styles.accountText}>Account 1</Text>
-          </View>
-          <View style={styles.divider} />
-          <View style={styles.addressContainer}>
-            <Text style={styles.addressLabel}>Address:</Text>
-            <View style={styles.addressTextContainer}>
-              <Text style={styles.address}>0x123E...43A</Text>
-            </View>
-          </View>
-        </View>
-      </View>
-    </View>
+    <Container>
+      <Card>
+        <AccountContainer>
+          <AccountText>Account 1</AccountText>
+        </AccountContainer>
+        <Divider />
+        <AddressContainer>
+          <AddressLabel>Address:</AddressLabel>
+          <AddressTextContainer>
+            <Address>0x123E...43A</Address>
+          </AddressTextContainer>
+        </AddressContainer>
+      </Card>
+    </Container>
   );
 };
 
 export default WalletAccount;
 
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-    width: "100%",
-    marginBottom: 20,
-  },
-  card: {
-    borderWidth: 2,
-    borderColor: "grey",
-    width: 350,
-    height: 100,
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 15,
-  },
-  divider: {
-    borderWidth: 1,
-    borderColor: "grey",
-    marginTop: 10,
-    marginBottom: 10,
-  },
-  accountContainer: {},
-  accountText: {
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-  addressContainer: {
-    flexDirection: "row",
-    gap: 5,
-  },
-  addressLabel: {
-    fontWeight: "bold",
-  },
-  addressTextContainer: {
-    backgroundColor: "blue",
-    paddingHorizontal: 20,
-    borderRadius: 8,
-  },
-  address: { color: "white" },
-});
+const Container = styled.View`
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+`;
+
+const Card = styled.View`
+  border-width: 2px;
+  border-color: grey;
+  width: 350px;
+  height: 100px;
+  padding: 10px 20px;
+  border-radius: 15px;
+`;
+
+const Divider = styled.View`
+  border-width: 1px;
+  border-color: grey;
+  margin-top: 10px;
+  margin-bottom: 10px;
+`;
+
+const AccountContainer = styled.View``;
+
+const AccountText = styled.Text`
+  font-size: 20px;
+  font-weight: bold;
+`;
+
+const AddressContainer = styled.View`
+  flex-direction: row;
+  gap: 5px;
+`;
+
+const AddressLabel = styled.Text`
+  font-weight: bold;
+`;
+
+const AddressTextContainer = styled.View`
+  background-color: blue;
+  padding: 0px 20px;
+  border-radius: 8px;
+`;
+
+const Address = styled.Text`
+  color: white;
+`;

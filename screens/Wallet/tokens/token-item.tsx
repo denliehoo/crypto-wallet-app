@@ -1,4 +1,6 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { Pressable, View, Text } from "react-native";
+import styled from "styled-components/native";
 
 import Avatar from "@/components/Avatar";
 import EthLogo from "@/assets/logos/eth-logo.png";
@@ -13,44 +15,46 @@ interface ITokenItemProps {
 
 const TokenItem: FC<ITokenItemProps> = ({ onPress, asset, amount, value }) => {
   return (
-    <Pressable style={styles.container} onPress={onPress}>
-      <View>
+    <Container onPress={onPress}>
+      <AvatarContainer>
         <Avatar src={EthLogo} />
-      </View>
-      <View style={styles.detailsContainer}>
+      </AvatarContainer>
+      <DetailsContainer>
         <View>
-          <Text style={styles.boldText}>{asset}</Text>
+          <BoldText>{asset}</BoldText>
           <Text>
             {amount} {asset}
           </Text>
         </View>
         <View>
-          <Text style={styles.boldText}>${value}</Text>
+          <BoldText>${value}</BoldText>
         </View>
-      </View>
-    </Pressable>
+      </DetailsContainer>
+    </Container>
   );
 };
 
 export default TokenItem;
 
-const styles = StyleSheet.create({
-  container: {
-    height: 64,
-    flexDirection: "row",
-    alignItems: "center",
-    padding: 8,
-    marginBottom: 8,
-  },
-  detailsContainer: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    flex: 1,
-    marginLeft: 4,
-  },
-  boldText: {
-    fontSize: 18,
-    fontWeight: "500",
-  },
-});
+const Container = styled(Pressable)`
+  height: 64px;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 8px;
+`;
+
+const AvatarContainer = styled.View``;
+
+const DetailsContainer = styled.View`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1;
+  margin-left: 4px;
+`;
+
+const BoldText = styled.Text`
+  font-size: 18px;
+  font-weight: 500;
+`;
