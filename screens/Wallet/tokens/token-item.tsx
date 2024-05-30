@@ -5,12 +5,10 @@ import styled from "styled-components/native";
 import Avatar from "@/components/Avatar";
 import EthLogo from "@/assets/logos/eth-logo.png";
 import { FC } from "react";
+import { ITokenDetails } from "@/store/context/tokens";
 
-interface ITokenItemProps {
+export interface ITokenItemProps extends ITokenDetails {
   onPress: () => void;
-  asset: string;
-  amount: number;
-  value: number;
 }
 
 const TokenItem: FC<ITokenItemProps> = ({ onPress, asset, amount, value }) => {

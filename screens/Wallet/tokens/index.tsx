@@ -1,10 +1,29 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
 import TokenItem from "./token-item";
+import { useContext } from "react";
+import { TokensContext } from "@/store/context/tokens";
 const WalletTokens = () => {
+  const tokensCtx = useContext(TokensContext);
+  const { tokens, tokensLoading } = tokensCtx;
+
+  const tokensData = tokens.map((token) => ({
+    ...token,
+    onPress: () => console.log("pressed"),
+  }));
+
+  if (tokensLoading) {
+    // TODO: Create a loading spinner
+    return (
+      <View>
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
+
   return (
     <View>
       <FlatList
-        data={DUMMY_DATA}
+        data={tokensData}
         renderItem={({ item }) => <TokenItem {...item} />}
       />
     </View>
@@ -12,108 +31,3 @@ const WalletTokens = () => {
 };
 
 export default WalletTokens;
-
-const DUMMY_DATA = [
-  {
-    asset: "BNB",
-    amount: 0.123123,
-    value: 200.12,
-    onPress: () => console.log("pressed"),
-  },
-  {
-    asset: "BNB",
-    amount: 0.123123,
-    value: 200.12,
-    onPress: () => console.log("pressed"),
-  },
-  {
-    asset: "BNB",
-    amount: 0.123123,
-    value: 200.12,
-    onPress: () => console.log("pressed"),
-  },
-  {
-    asset: "BNB",
-    amount: 0.123123,
-    value: 200.12,
-    onPress: () => console.log("pressed"),
-  },
-  {
-    asset: "BNB",
-    amount: 0.123123,
-    value: 200.12,
-    onPress: () => console.log("pressed"),
-  },
-  {
-    asset: "BNB",
-    amount: 0.123123,
-    value: 200.12,
-    onPress: () => console.log("pressed"),
-  },
-  {
-    asset: "BNB",
-    amount: 0.123123,
-    value: 200.12,
-    onPress: () => console.log("pressed"),
-  },
-  {
-    asset: "BNB",
-    amount: 0.123123,
-    value: 200.12,
-    onPress: () => console.log("pressed"),
-  },
-  {
-    asset: "BNB",
-    amount: 0.123123,
-    value: 200.12,
-    onPress: () => console.log("pressed"),
-  },
-  {
-    asset: "BNB",
-    amount: 0.123123,
-    value: 200.12,
-    onPress: () => console.log("pressed"),
-  },
-  {
-    asset: "BNB",
-    amount: 0.123123,
-    value: 200.12,
-    onPress: () => console.log("pressed"),
-  },
-  {
-    asset: "BNB",
-    amount: 0.123123,
-    value: 200.12,
-    onPress: () => console.log("pressed"),
-  },
-  {
-    asset: "BNB",
-    amount: 0.123123,
-    value: 200.12,
-    onPress: () => console.log("pressed"),
-  },
-  {
-    asset: "BNB",
-    amount: 0.123123,
-    value: 200.12,
-    onPress: () => console.log("pressed"),
-  },
-  {
-    asset: "BNB",
-    amount: 0.123123,
-    value: 200.12,
-    onPress: () => console.log("pressed"),
-  },
-  {
-    asset: "BNB",
-    amount: 0.123123,
-    value: 200.12,
-    onPress: () => console.log("pressed"),
-  },
-  {
-    asset: "BNB",
-    amount: 0.123123,
-    value: 200.12,
-    onPress: () => console.log("pressed"),
-  },
-];
