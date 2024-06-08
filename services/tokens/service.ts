@@ -34,36 +34,3 @@ class TokensService extends Service<ITokensContext> {
 }
 
 export const tokensService = new TokensService();
-
-const DUMMY_TOKENS = [
-  {
-    asset: "BNB",
-    amount: "0.123123",
-    value: "200.12",
-  },
-  {
-    asset: "BNB",
-    amount: "0.123123",
-    value: "200.12",
-  },
-  {
-    asset: "BNB",
-    amount: "0.123123",
-    value: "200.12",
-  },
-  {
-    asset: "BNB",
-    amount: "0.123123",
-    value: "200.12",
-  },
-  {
-    asset: "BNB",
-    amount: "0.123123",
-    value: "200.12",
-  },
-  {
-    asset: "BNB",
-    amount: "0.123123",
-    value: "200.12",
-  },
-];

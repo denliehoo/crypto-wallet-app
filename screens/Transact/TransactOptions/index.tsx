@@ -1,16 +1,14 @@
-import { useContext } from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
 import { FontAwesome } from "@expo/vector-icons";
 import {
-  BottomDrawerContext,
   EBottomDrawerContent,
-} from "@/store/context/bottom-drawer";
+  bottomDrawerService,
+} from "@/services/bottom-drawer";
 
 const TransactOptions = () => {
-  const bottomDrawerCtx = useContext(BottomDrawerContext);
-  const { changeContent, hide } = bottomDrawerCtx;
+  const { changeContent, hide } = bottomDrawerService;
   const navigation = useNavigation();
   return (
     <View>

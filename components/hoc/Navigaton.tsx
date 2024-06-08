@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
-import React, { useContext } from "react";
+import React from "react";
 import { Pressable } from "react-native";
 import HistoryScreen from "../../screens/History";
 
@@ -10,22 +10,21 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import EmptyComponent from "../EmptyComponent";
-import {
-  BottomDrawerContext,
-  EBottomDrawerContent,
-} from "../../store/context/bottom-drawer";
 
 import WalletScreen from "@/screens/Wallet";
 import SettingsScreen from "@/screens/Settings";
 import SendScreen from "@/screens/Transact/Send";
 import SwapScreen from "@/screens/Transact/Swap";
 import BottomDrawer from "@/screens/BottomDrawer";
+import {
+  EBottomDrawerContent,
+  bottomDrawerService,
+} from "@/services/bottom-drawer";
 
 const Tab = createBottomTabNavigator();
 
 const Navigation = () => {
-  const bottomDrawerCtx = useContext(BottomDrawerContext);
-  const { show } = bottomDrawerCtx;
+  const { changeContent } = bottomDrawerService;
   return (
     <>
       <NavigationContainer>
@@ -59,7 +58,7 @@ const Navigation = () => {
                 <Pressable
                   {...props}
                   onPress={() => {
-                    show(EBottomDrawerContent.TRANSACT_DRAWER_OPTIONS);
+                    changeContent(EBottomDrawerContent.TRANSACT_DRAWER_OPTIONS);
                   }}
                 />
               ),
@@ -80,7 +79,7 @@ const Navigation = () => {
                 <Pressable
                   {...props}
                   onPress={() => {
-                    show(EBottomDrawerContent.CONNECT);
+                    changeContent(EBottomDrawerContent.CONNECT);
                   }}
                 />
               ),
