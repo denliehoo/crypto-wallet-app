@@ -9,7 +9,12 @@ export const TokensContextProvider: React.FC<{ children: ReactNode }> = ({
   const [tokens, setTokens] = useState<ITokenDetails[]>([]);
 
   const fetchTokens = () => {
-    setTokens(DUMMY_TOKENS);
+    setTokensLoading(true);
+    // TODO call API in the future to get balances
+    setTimeout(() => {
+      setTokens(DUMMY_TOKENS);
+      setTokensLoading(false);
+    }, 2000);
   };
 
   const value: TokensContextProps = {

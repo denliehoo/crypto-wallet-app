@@ -1,7 +1,14 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  View,
+  ActivityIndicator,
+} from "react-native";
 import TokenItem from "./token-item";
 import { useContext } from "react";
 import { TokensContext } from "@/store/context/tokens";
+
 const WalletTokens = () => {
   const tokensCtx = useContext(TokensContext);
   const { tokens, tokensLoading } = tokensCtx;
@@ -12,12 +19,7 @@ const WalletTokens = () => {
   }));
 
   if (tokensLoading) {
-    // TODO: Create a loading spinner
-    return (
-      <View>
-        <Text>Loading...</Text>
-      </View>
-    );
+    return <ActivityIndicator size="large" color="black" />;
   }
 
   return (

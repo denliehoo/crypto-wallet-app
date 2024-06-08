@@ -10,7 +10,7 @@ const WalletScreen = () => {
   useEffect(() => {
     tokensCtx.fetchTokens();
     // TODO: Check when useEffect is called
-  }, [tokensCtx]);
+  }, []);
 
   return (
     <View>
