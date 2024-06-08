@@ -2,13 +2,11 @@ import { StyleSheet, View } from "react-native";
 import WalletTokens from "./tokens";
 import WalletNetwork from "./network";
 import WalletAccount from "./account";
-import { useContext, useEffect } from "react";
-import { TokensContext } from "@/store/context/tokens";
+import { useEffect } from "react";
+import { tokensService } from "@/services/tokens";
 const WalletScreen = () => {
-  const tokensCtx = useContext(TokensContext);
-
   useEffect(() => {
-    tokensCtx.fetchTokens();
+    tokensService.fetchTokens();
     // TODO: Check when useEffect is called
   }, []);
 

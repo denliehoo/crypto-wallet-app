@@ -1,17 +1,9 @@
-import {
-  FlatList,
-  StyleSheet,
-  Text,
-  View,
-  ActivityIndicator,
-} from "react-native";
+import { FlatList, View, ActivityIndicator } from "react-native";
 import TokenItem from "./token-item";
-import { useContext } from "react";
-import { TokensContext } from "@/store/context/tokens";
+import { useTokens } from "@/services/tokens";
 
 const WalletTokens = () => {
-  const tokensCtx = useContext(TokensContext);
-  const { tokens, tokensLoading } = tokensCtx;
+  const { tokens, tokensLoading } = useTokens();
 
   const tokensData = tokens.map((token) => ({
     ...token,
