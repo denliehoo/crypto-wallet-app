@@ -14,8 +14,8 @@ A non-custodial crypto wallet application built using react native and expo. App
 
 ## Instructions
 
-- npm install
-- npm start
+- yarn install
+- yarn start
 
 ## TODO
 
