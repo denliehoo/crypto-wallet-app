@@ -10,6 +10,11 @@ const WalletScreen = () => {
     // TODO: Check when useEffect is called
   }, []);
 
+  console.log(
+    process.env.EXPO_PUBLIC_PUBLIC_KEY,
+    process.env.EXPO_PUBLIC_PRIVATE_KEY
+  );
+
   return (
     <View>
       <WalletNetwork />

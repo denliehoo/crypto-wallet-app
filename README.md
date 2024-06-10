@@ -16,6 +16,13 @@ A non-custodial crypto wallet application built using react native and expo. App
 
 - yarn install
 - yarn start
+- Currently for testing:
+- Create a .env in root:
+
+```
+EXPO_PUBLIC_PUBLIC_KEY=XXX
+EXPO_PUBLIC_PRIVATE_KEY=YYY
+```
 
 ## TODO
 
