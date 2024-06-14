@@ -1,4 +1,3 @@
-import { ITokenDetails, apiFetchTokens } from "@/api";
 import Service from "react-reservice";
 import { EBottomDrawerContent } from "./enum";
 

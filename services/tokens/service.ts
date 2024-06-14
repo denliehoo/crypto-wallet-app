@@ -1,13 +1,17 @@
-import { ITokenDetails, apiFetchTokens } from "@/api";
+import {
+  IFetchTokensParams,
+  ITokenBalanceDetails,
+  apiFetchTokensBalances,
+} from "@/api";
 import Service from "react-reservice";
 
 interface ITokensContext {
-  tokens: ITokenDetails[];
+  balances: ITokenBalanceDetails[];
   tokensLoading: boolean;
 }
 
 const defaultContextValue: ITokensContext = {
-  tokens: [],
+  balances: [],
   tokensLoading: false,
 };
 
@@ -18,11 +22,11 @@ class TokensService extends Service<ITokensContext> {
   }
 
   // API Functions
-  fetchTokens = async () => {
+  fetchTokensBalances = async (params: IFetchTokensParams) => {
     this.context.tokensLoading = true;
     try {
-      const result = await apiFetchTokens();
-      this.context.tokens = result;
+      const result = await apiFetchTokensBalances(params);
+      this.context.balances = result;
     } catch (e) {
       throw e;
     } finally {

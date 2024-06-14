@@ -3,10 +3,10 @@ import TokenItem from "./token-item";
 import { useTokens } from "@/services/tokens";
 
 const WalletTokens = () => {
-  const { tokens, tokensLoading } = useTokens();
+  const { balances, tokensLoading } = useTokens();
 
-  const tokensData = tokens.map((token) => ({
-    ...token,
+  const tokensData = balances.map((details) => ({
+    ...details,
     onPress: () => console.log("pressed"),
   }));
 

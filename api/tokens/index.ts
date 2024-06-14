@@ -1,1 +1,1 @@
-export * from "./api-fetch-tokens";
+export * from "./api-fetch-tokens-balances";

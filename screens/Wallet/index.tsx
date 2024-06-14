@@ -6,7 +6,10 @@ import { useEffect } from "react";
 import { tokensService } from "@/services/tokens";
 const WalletScreen = () => {
   useEffect(() => {
-    tokensService.fetchTokens();
+    tokensService.fetchTokensBalances({
+      network: "Sepolia",
+      tokens: ["0x", "0x"],
+    });
     // TODO: Check when useEffect is called
   }, []);
 

@@ -1,7 +1,6 @@
 # Todo:
 
-- Find a way get token balances for the wallet from blockchain. Start of with Sepolia Testnet; either:
-  - Use moralis API: https://docs.moralis.io/web3-data-api/evm/reference/wallet-api/get-token-balances-by-wallet?address=0x1f9090aaE28b8a3dCeaDf281B0F12828e676c326&chain=sepolia&token_addresses=[]
+- Flow: User adds token (just need the address) => get details from etherscan API => add it to list of tokens => then from that list of tokens we call a (fake) API to get the token balances and pricen
 - Change wallet screen from hard-coded data to real-time data from blockchain
 - Work on send screen (hard code for now with dummy data as a simulation)
 - Find a way to interact with the blockchain (send) and implement in Send screen. Hard code seed phrase/private key/ wallet address for now:
@@ -22,6 +21,12 @@
 # Bugs Log
 
 # Future Tasks (no particular order, non-exhaustive):
+
+- Find a way get token balances for the wallet from blockchain. Start of with Sepolia Testnet; either:
+
+  - Use moralis API: https://docs.moralis.io/web3-data-api/evm/reference/wallet-api/get-token-balances-by-wallet?address=0x1f9090aaE28b8a3dCeaDf281B0F12828e676c326&chain=sepolia&token_addresses=[]
+    - WETH: 0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14
+  - => For now, just leave the balances and value as a hard coded value. However, we still need to store the user's token addresses somewhere
 
 - TBC...
 
