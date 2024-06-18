@@ -5,9 +5,9 @@ import styled from "styled-components/native";
 import Avatar from "@/components/Avatar";
 import EthLogo from "@/assets/logos/eth-logo.png";
 import { FC } from "react";
-import { ITokenDetails } from "@/store/context/tokens";
+import { ITokenBalanceDetails } from "@/api";
 
-export interface ITokenItemProps extends ITokenDetails {
+export interface ITokenItemProps extends ITokenBalanceDetails {
   onPress: () => void;
 }
 

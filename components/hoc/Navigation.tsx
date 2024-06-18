@@ -20,6 +20,7 @@ import {
   EBottomDrawerContent,
   bottomDrawerService,
 } from "@/services/bottom-drawer";
+import ImportTokenScreen from "@/screens/Wallet/import-token";
 
 const Tab = createBottomTabNavigator();
 
@@ -29,6 +30,7 @@ const Navigation = () => {
     <>
       <NavigationContainer>
         <Tab.Navigator>
+          {/* TODO: Change the name to enum for better TS completion e.g. EScreen.Wallet = "Wallet" */}
           <Tab.Screen
             name="Wallet"
             component={WalletScreen}
@@ -36,6 +38,13 @@ const Navigation = () => {
               tabBarIcon: () => (
                 <Ionicons name="wallet" size={24} color="black" />
               ),
+            }}
+          />
+          <Tab.Screen
+            name="Import Token"
+            component={ImportTokenScreen}
+            options={{
+              tabBarButton: () => null,
             }}
           />
           <Tab.Screen

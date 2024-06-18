@@ -1,8 +1,6 @@
 import "react-native-gesture-handler";
 
-import { StyleSheet } from "react-native";
-
-import Navigaton from "./components/hoc/Navigaton";
+import Navigaton from "./components/hoc/Navigation";
 
 export default function App() {
   return <Navigaton />;

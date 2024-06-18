@@ -4,8 +4,10 @@ import WalletNetwork from "./network";
 import WalletAccount from "./account";
 import { useEffect } from "react";
 import { tokensService } from "@/services/tokens";
+
 const WalletScreen = () => {
   useEffect(() => {
+    // TODO, get the tokens from service instead
     tokensService.fetchTokensBalances({
       network: "Sepolia",
       tokens: ["0x", "0x"],
@@ -28,5 +30,3 @@ const WalletScreen = () => {
 };
 
 export default WalletScreen;
-
-const styles = StyleSheet.create({});

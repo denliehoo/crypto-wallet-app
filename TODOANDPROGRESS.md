@@ -1,5 +1,7 @@
 # Todo:
 
+- Setup "localStorage"
+- Add web3js and get token details from the contract
 - Flow: User adds token (just need the address) => get details from etherscan API => add it to list of tokens => then from that list of tokens we call a (fake) API to get the token balances and pricen
 - Change wallet screen from hard-coded data to real-time data from blockchain
 - Work on send screen (hard code for now with dummy data as a simulation)
